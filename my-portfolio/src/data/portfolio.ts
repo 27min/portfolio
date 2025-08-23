@@ -4,17 +4,17 @@ export const DATA = {
   profile: {
     name: "김민석",
     role: "백엔드 개발자 (Node/Spring)",
-    tagline: "기능 나열이 아닌 문제 해결 과정을 설계하는 개발자",
+    tagline: "문제 해결과 서비스 품질을 함께 고민하는 백엔드 개발자입니다.",
     location: "대한민국",
-    email: "",
-    phone: "",
+    email: "kimms51567115@gmail.com",
+    phone: "010-5156-7115",
     summary:
-      "JWT·인증 구조/데이터 흐름 설계 경험. 사이드 프로젝트로 멀티테넌시 SaaS를 설계 중이며, 실무에서는 행정/프로젝트 관리 경험을 통해 요구사항 정의와 문서화를 강점으로 삼습니다.",
+      "Spring Boot와 Node.js 기반으로 API 설계, DB 모델링, 인증·보안 강화에 강점을 가진 백엔드 개발자입니다. JWT 구조 개선과 WebSocket 성능 최적화를 통해 보안성과 응답 속도를 동시에 향상시킨 경험이 있습니다. Swagger 기반 API 문서화를 통한 협업 경험과 Vercel·Railway·AWS 배포 경험을 바탕으로, 안정적이고 확장 가능한 서비스를 지향합니다."
   },
   archiving: [
     {
       label: "GitHub",
-      href: "https://github.com/",
+      href: "https://github.com/27min",
       icon: Github,
       desc: "프로젝트 소스 코드 및 학습 기록",
     },
@@ -63,7 +63,7 @@ export const DATA = {
       tags: ["LMS", "SSR→CSR", "노트", "UX"],
       links: [
         { label: "Repo", href: "#" },
-        { label: "README", href: "#" },
+        { label: "README", href: "https://github.com/27min/LearnTube" },
       ],
     },
     {
@@ -81,7 +81,7 @@ export const DATA = {
       tags: ["인증", "JWT", "보안", "API연동"],
       links: [
         { label: "Repo", href: "#" },
-        { label: "README", href: "#" },
+        { label: "README", href: "https://github.com/27min" },
       ],
     },
     {
@@ -98,7 +98,24 @@ export const DATA = {
       tags: ["플랫폼", "Swagger", "협업"],
       links: [
         { label: "Repo", href: "#" },
-        { label: "README", href: "#" },
+        { label: "README", href: "https://github.com/27min/CodeChat" },
+      ],
+    },
+    {
+      title: "반려동물 커뮤니티 모바일 웹",
+      date: "2025",
+      featured: false,
+      summary:
+        "문제 리스트/에디터/채점 흐름 설계. Swagger 도입으로 FE·BE 협업 테스트 효율화.",
+      bullets: [
+        "REST API 스펙화 + Swagger 기반 사전 테스트",
+        "WebSocket 기반 채팅 기능 구현",
+      ],
+      stack: ["Spring Boot", "React", "PostgreSQL"],
+      tags: ["Swagger", "WebSocket", "RESTful API", "협업"],
+      links: [
+        { label: "Repo", href: "#" },
+        { label: "README", href: "https://github.com/27min/Petstagram" },
       ],
     },
   ],
@@ -106,19 +123,10 @@ export const DATA = {
     {
       company: "대한실업",
       role: "연구원 (환경/R&D, 행정)",
-      period: "2024 – 2025",
+      period: "2025.05 ~ ",
       bullets: [
         "정부과제 문서화/정산/보고 프로세스 경험",
         "현장 조사/데이터 정리 및 산출물 관리",
-      ],
-    },
-    {
-      company: "사이드 프로젝트",
-      role: "백엔드 개발",
-      period: "진행 중",
-      bullets: [
-        "멀티테넌시 Gym SaaS 설계 (코어/테넌트 DB 메타 구조)",
-        "Next.js·Nest.js 기반 서비스 아키텍처 실험",
       ],
     },
   ],
