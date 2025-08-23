@@ -9,7 +9,7 @@ export default function ThemeToggle() {
     <button
       onClick={() => setDark(!dark)}
       aria-label="toggle theme"
-      className="p-2 rounded-xl border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800"
+      className="p-2 rounded-xl border border-primary text-primary hover:bg-primary/10"
     >
       {dark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
     </button>
