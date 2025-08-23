@@ -14,51 +14,37 @@ export default function Projects() {
     return ["전체", ...Array.from(set)];
   }, []);
 
-  const [onlyFeatured, setOnlyFeatured] = useState(true);
   const [tag, setTag] = useState("전체");
   const [q, setQ] = useState("");
 
   const filtered = useMemo(() => {
     return DATA.projects.filter(p => {
-      if (onlyFeatured && !p.featured) return false;
       if (tag !== "전체" && !p.tags.includes(tag)) return false;
       const qq = q.trim().toLowerCase();
       if (qq && !(`${p.title} ${p.summary} ${p.stack.join(" ")} ${p.tags.join(" ")}`.toLowerCase().includes(qq)))
         return false;
       return true;
     });
-  }, [onlyFeatured, tag, q]);
+  }, [tag, q]);
 
   return (
     <Section id="projects" title="PROJECTS" icon={Layers}>
       <div className="mb-4 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
-        <div className="flex items-center gap-2">
-          <label className="inline-flex items-center gap-2 text-sm cursor-pointer select-none">
-            <input
-              type="checkbox"
-              className="accent-black dark:accent-white"
-              checked={onlyFeatured}
-              onChange={e => setOnlyFeatured(e.target.checked)}
-            />
-            주요 프로젝트만 보기
-          </label>
-          <div className="hidden md:block h-5 w-px bg-neutral-300 dark:bg-neutral-700" />
-          <div className="flex flex-wrap gap-2">
-            {allTags.map(t => (
-              <button
-                key={t}
-                onClick={() => setTag(t)}
-                className={cx(
-                  "px-3 py-1 rounded-full border text-sm",
-                  t === tag
-                    ? "bg-black text-white border-black dark:bg-white dark:text-black dark:border-white"
-                    : "border-neutral-300 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800"
-                )}
-              >
-                {t}
-              </button>
-            ))}
-          </div>
+        <div className="flex flex-wrap gap-2">
+          {allTags.map(t => (
+            <button
+              key={t}
+              onClick={() => setTag(t)}
+              className={cx(
+                "px-3 py-1 rounded-full border text-sm",
+                t === tag
+                  ? "bg-black text-white border-black dark:bg-white dark:text-black dark:border-white"
+                  : "border-neutral-300 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800"
+              )}
+            >
+              {t}
+            </button>
+          ))}
         </div>
         <input
           value={q}

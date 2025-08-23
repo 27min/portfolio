@@ -1,6 +1,6 @@
 "use client";
 
-import { Link as LinkIcon, BookOpen, MapPin } from "lucide-react";
+import { Link as LinkIcon, BookOpen, MapPin, Mail, Phone } from "lucide-react";
 import Section from "@/components/Section";
 import { DATA } from "@/data/portfolio";
 
@@ -10,7 +10,9 @@ export default function About() {
     { icon: LinkIcon, label: "이름", value: p.name },
     { icon: BookOpen, label: "역할", value: p.role },
     { icon: MapPin, label: "위치", value: p.location },
-  ];
+    { icon: Mail, label: "이메일", value: p.email },
+    { icon: Phone, label: "전화번호", value: p.phone },
+  ].filter((r) => r.value);
   return (
     <Section id="about" title="ABOUT ME" icon={LinkIcon}>
       <div className="grid md:grid-cols-2 gap-6">
