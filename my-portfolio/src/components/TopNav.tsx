@@ -1,6 +1,6 @@
 "use client";
 
-import ThemeToggle from "@/components/ThemeToggle";
+// import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
   { id: "about", label: "About" },
@@ -22,7 +22,7 @@ export default function TopNav() {
             </a>
           ))}
         </nav>
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
       </div>
     </div>
   );

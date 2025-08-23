@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="mt-8 flex gap-3">
           <a
             href="#projects"
-            className="px-4 py-2 rounded-xl bg-primary text-white hover:opacity-90"
+            className="px-4 py-2 rounded-xl bg-black text-white hover:opacity-90"
           >
             프로젝트 보러가기
           </a>
