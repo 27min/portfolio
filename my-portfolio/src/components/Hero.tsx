@@ -1,6 +1,5 @@
 "use client";
 
-import { MapPin, Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/utils";
 import { DATA } from "@/data/portfolio";
@@ -17,17 +16,6 @@ export default function Hero() {
         <p className="mt-4 text-lg md:text-xl text-neutral-700 dark:text-neutral-300">
           {p.tagline}
         </p>
-        <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-neutral-600 dark:text-neutral-300">
-          <span className="inline-flex items-center gap-1"><MapPin className="h-4 w-4" /> {p.location}</span>
-          {p.email && (
-            <a className="inline-flex items-center gap-1 hover:underline" href={`mailto:${p.email}`}>
-              <Mail className="h-4 w-4" /> {p.email}
-            </a>
-          )}
-          {p.phone && (
-            <span className="inline-flex items-center gap-1"><Phone className="h-4 w-4" /> {p.phone}</span>
-          )}
-        </div>
         <p className="mt-6 max-w-3xl text-base leading-7 text-neutral-700 dark:text-neutral-300">{p.summary}</p>
         <div className="mt-8 flex gap-3">
           <a href="#projects" className="px-4 py-2 rounded-xl bg-black text-white dark:bg-white dark:text-black hover:opacity-90">프로젝트 보러가기</a>
