@@ -1,61 +1,16 @@
 "use client";
 
-import { useMemo, useState } from "react";
 import Section from "@/components/Section";
 import { DATA } from "@/data/portfolio";
 import { Layers, ExternalLink } from "lucide-react";
-import { cx, fadeUp } from "@/lib/utils";
+import { fadeUp } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 export default function Projects() {
-  const allTags = useMemo(() => {
-    const set = new Set<string>();
-    DATA.projects.forEach(p => p.tags.forEach(t => set.add(t)));
-    return ["전체", ...Array.from(set)];
-  }, []);
-
-  const [tag, setTag] = useState("전체");
-  const [q, setQ] = useState("");
-
-  const filtered = useMemo(() => {
-    return DATA.projects.filter(p => {
-      if (tag !== "전체" && !p.tags.includes(tag)) return false;
-      const qq = q.trim().toLowerCase();
-      if (qq && !(`${p.title} ${p.summary} ${p.stack.join(" ")} ${p.tags.join(" ")}`.toLowerCase().includes(qq)))
-        return false;
-      return true;
-    });
-  }, [tag, q]);
-
   return (
     <Section id="projects" title="PROJECTS" icon={Layers}>
-      <div className="mb-4 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
-        <div className="flex flex-wrap gap-2">
-          {allTags.map(t => (
-            <button
-              key={t}
-              onClick={() => setTag(t)}
-              className={cx(
-                "px-3 py-1 rounded-full border text-sm",
-                t === tag
-                  ? "bg-black text-white border-black dark:bg-white dark:text-black dark:border-white"
-                  : "border-neutral-300 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800"
-              )}
-            >
-              {t}
-            </button>
-          ))}
-        </div>
-        <input
-          value={q}
-          onChange={e => setQ(e.target.value)}
-          placeholder="검색: 제목/요약/스택/태그"
-          className="w-full md:w-72 px-3 py-2 rounded-xl border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 outline-none focus:ring-2 focus:ring-neutral-400"
-        />
-      </div>
-
       <div className="grid md:grid-cols-2 gap-4">
-        {filtered.map((p, idx) => (
+        {DATA.projects.map((p, idx) => (
           <motion.article
             key={idx}
             {...fadeUp}
