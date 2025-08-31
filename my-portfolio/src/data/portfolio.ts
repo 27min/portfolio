@@ -5,9 +5,11 @@ export const DATA = {
     name: "김민석",
     role: "백엔드 개발자 (Node/Spring)",
     tagline: "문제 해결과 서비스 품질을 함께 고민하는 백엔드 개발자입니다.",
-    location: "대한민국",
+    location: "대구 달성군",
     email: "kimms51567115@gmail.com",
+    birth: "2000년 2월 7일",
     phone: "010-5156-7115",
+    edu: "계명대학교 기계공학과 (학사)",
     summary:
       "Spring Boot와 Node.js 기반으로 API 설계, DB 모델링, 인증·보안 강화에 강점을 가진 백엔드 개발자입니다. JWT 구조 개선과 WebSocket 성능 최적화를 통해 보안성과 응답 속도를 동시에 향상시킨 경험이 있습니다. Swagger 기반 API 문서화를 통한 협업 경험과 Vercel·Railway·AWS 배포 경험을 바탕으로, 안정적이고 확장 가능한 서비스를 지향합니다."
   },
