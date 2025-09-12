@@ -5,7 +5,6 @@ import TopNav from "@/components/TopNav";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
-import Archiving from "@/components/Archiving";
 import Projects from "@/components/Projects";
 import Career from "@/components/Career";
 import Footer from "@/components/Footer";
