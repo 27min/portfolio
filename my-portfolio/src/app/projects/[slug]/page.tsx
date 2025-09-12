@@ -14,6 +14,7 @@ export function generateStaticParams() {
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params;
   const project = DATA.projects.find((p) => p.slug === slug);
+
   if (!project) notFound();
 
   return (
