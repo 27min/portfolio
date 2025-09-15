@@ -51,7 +51,6 @@ export const DATA = {
   ],
   projects: [
     {
-      slug: "learntube",
       title: "LearnTube – YouTube 기반 LMS",
       date: "2024",
       featured: true,
@@ -70,7 +69,6 @@ export const DATA = {
       ],
     },
     {
-      slug: "voice-phishing",
       title: "보이스피싱 판별 모바일 웹",
       date: "2024",
       featured: true,
@@ -89,7 +87,6 @@ export const DATA = {
       ],
     },
     {
-      slug: "codechat",
       title: "코딩테스트 플랫폼 (챗봇 연동)",
       date: "2024",
       featured: false,
@@ -107,7 +104,6 @@ export const DATA = {
       ],
     },
     {
-      slug: "petstagram",
       title: "Petstagram - 반려동물 SNS 프로젝트",
       date: "2025",
       featured: false,

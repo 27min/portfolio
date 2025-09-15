@@ -5,10 +5,8 @@ import { DATA } from "@/data/portfolio";
 import { Layers, ExternalLink } from "lucide-react";
 import { fadeUp } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 
 export default function Projects() {
-  const router = useRouter();
   return (
     <Section id="projects" title="PROJECTS" icon={Layers}>
       <div className="grid md:grid-cols-2 gap-4">
@@ -16,8 +14,7 @@ export default function Projects() {
           <motion.article
             key={idx}
             {...fadeUp}
-            onClick={() => router.push(`/projects/${p.slug}`)}
-            className="cursor-pointer rounded-2xl border border-neutral-200 dark:border-neutral-800 p-5"
+            className="rounded-2xl border border-neutral-200 dark:border-neutral-800 p-5"
           >
             <header className="flex items-start justify-between gap-2">
               <div>
@@ -56,7 +53,6 @@ export default function Projects() {
                     href={l.href}
                     target="_blank"
                     rel="noreferrer"
-                    onClick={(e) => e.stopPropagation()}
                     className="inline-flex items-center gap-1 text-sm px-2.5 py-1.5 rounded-lg border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800"
                   >
                     <ExternalLink className="h-4 w-4" /> {l.label}
