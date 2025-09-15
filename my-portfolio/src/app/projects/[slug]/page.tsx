@@ -4,17 +4,15 @@ import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 
 interface ProjectPageProps {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }
 
 export function generateStaticParams() {
   return DATA.projects.map((p) => ({ slug: p.slug }));
 }
 
-export default async function ProjectPage({ params }: ProjectPageProps) {
-  const { slug } = await params;
-  const project = DATA.projects.find((p) => p.slug === slug);
-
+export default function ProjectPage({ params }: ProjectPageProps) {
+  const project = DATA.projects.find((p) => p.slug === params.slug);
   if (!project) notFound();
 
   return (
