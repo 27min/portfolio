@@ -1,6 +1,6 @@
 "use client";
 
-import { Link as LinkIcon, MapPin, Mail, Phone, Pen, Calendar } from "lucide-react";
+import { Link as LinkIcon, BookOpen, MapPin, Mail, Phone, Pen, Calendar } from "lucide-react";
 import Section from "@/components/Section";
 import { DATA } from "@/data/portfolio";
 
